@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Live Golden</title>
+    <style>
+      :root{
+        --bg:#0b0b0b;
+        --gold1:#ffd966;
+        --gold2:#ffb84d;
+      }
+      html,body{height:100%;margin:0}
+      body{
+        display:flex;align-items:center;justify-content:center;
+        background: radial-gradient(circle at 10% 10%, rgba(255,217,102,0.06), transparent 10%),
+                    linear-gradient(180deg,#050505 0%, #0d0d0d 100%);
+        font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+        color:white;
+      }
+      .card{
+        text-align:center;padding:4rem 2.5rem;border-radius:18px;
+        backdrop-filter: blur(6px) brightness(1.05);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+      }
+      h1{
+        margin:0;font-size:clamp(2.5rem, 8vw, 6rem);letter-spacing:0.02em;
+        background:linear-gradient(90deg,var(--gold1),var(--gold2),#fff3c6);
+        -webkit-background-clip:text;background-clip:text;color:transparent;
+        filter: drop-shadow(0 6px 20px rgba(255,170,0,0.15));
+        animation: shimmer 3s linear infinite;
+      }
+      @keyframes shimmer{
+        0%{background-position:0%}
+        50%{background-position:100%}
+        100%{background-position:0%}
+      }
+      p{margin-top:0.75rem;color:#cfc9b0;font-size:1rem}
+      /* make it keyboard accessible and minimal */
+      a{color:inherit}
+    </style>
+  </head>
+  <body>
+    <main class="card" role="main" aria-label="Live Golden page">
+      <h1>Live Golden</h1>
+      <p>Bright, simple, and ready to use</p>
+    </main>
+  </body>
+</html>
